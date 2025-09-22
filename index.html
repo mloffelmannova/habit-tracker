@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart To-Do List / Habit Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart To-Do List</h1>
+
+        <form id="task-form">
+            <input type="text" id="task-name" placeholder="Nový úkol" required>
+            <label for="task-category">Kategorie</label>
+            <select id="task-category">
+                <option value="prace">Práce</option>
+                <option value="skola">Škola</option>
+                <option value="osobni">Osobní</option>
+            </select>
+            <label for="task-reminder" class="hidden-label">Čas připomenutí</label>
+            <input type="time" id="task-reminder" title="Zadejte čas připomenutí" placeholder="Čas připomenutí">
+            <button type="submit">Přidat</button>
+        </form>
+
+        <ul id="task-list"></ul>
+
+        <h2>Statistiky</h2>
+        <canvas id="taskChart" width="400" height="200"></canvas>
+    </div>
+
+    <script src="chart.min.js"></script>
+    <script src="script.js"></script>
+    <script src="charts.js"></script>
+</body>
+<footer>
+    <p>&copy; 2025 Smart To-Do List</p>
+</footer>
+</html>
